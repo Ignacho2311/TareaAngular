@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div id="contorno">
+        <div *ngIf="!activarMsj">
+            <form class="row g-3 needs-validation" [formGroup]="formulario" (ngSubmit)="validacion()" novalidate>
+                <ul>
+                    <li>
+                        <label class="form-label" >Nombre completo:</label>
+                        <input class="form-control" formControlName="nombre" type="text"  placeholder="Nombre completo">
+                        <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['nombre'].hasError('required')">
+                                Campo obligatorio
+                            </div>
+                            <div *ngIf="formulario.controls['nombre'].hasError('maxlength')">
+                                El máximo de caracteres es 10
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="form-label" >Teléfono:</label>
+                        <input class="form-control"  formControlName="telefono" type="text"  placeholder="Teléfono">
+                            <div *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['telefono'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['telefono'].hasError('maxlength')">
+                                    El máximo de caracteres es 10
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['telefono'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+                    <li>
+                        <label class="form-label" >Correo Electrónico:</label>
+                        <input class="form-control"  type="text" formControlName="correo" placeholder="Correo electrónico">
+
+
+                        <div *ngIf="formulario.controls['correo'].invalid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['correo'].hasError('required') ">
+                                Campo obligatorio
+                            </div>
+                            <div *ngIf="formulario.controls['correo'].hasError('email')">
+                                Debe ser tipo example@example.com
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <label class="form-label"> Dirigido a:</label>
+                        <select class="form-control" formControlName="dirigido"  >
+                            <option value="0" >Contenidos</option>
+                            <option value="0">Publicidad</option>
+                            <option value="0">Sugerencias</option>
+                            <option value="0">Suscripciones digitales</option>
+                        </select>
+
+                        <div *ngIf="formulario.controls['dirigido'].invalid && (formulario.controls['dirigido'].dirty || formulario.controls['dirigido'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['dirigido'].hasError('required') ">
+                                Campo obligatorio
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="form-label" for="">Mensaje:</label> 
+                        <textarea class="form-control" formControlName="mensaje" name="" id="" cols="0" rows="0"></textarea>
+                        <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['mensaje'].hasError('required') ">
+                                Campo obligatorio
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li>
+                        <button class="boton" type="submit" [disabled]="!formulario.valid">Enviar datos</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div *ngIf="activarMsj">
+            Hemos recibido tu solicitud!
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

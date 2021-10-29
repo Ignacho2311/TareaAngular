@@ -1,0 +1,117 @@
+.lista{
+    margin: 10px 0;
+    padding: 2px;
+}
+.probando{
+    text-align: center;
+}
+#fondo{ 
+    width: 100%;
+    height: 350px;
+}
+
+
+#noticia{
+    list-style-type: none;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+    background-color:rgb(233, 233, 233);
+    font-family: sans-serif;
+
+}
+h1{
+    font-family: sans-serif;
+    text-align: center;
+}
+#noticia img{
+    
+    width: 100%;
+    height: 35%;
+}
+p{
+    margin: 10px;
+}
+
+#noticias2{
+    float: left;
+}
+// COLOR PARA LOS TITULOS DE LA PÁGINA PRINCIPAL
+.azulTitulo{
+    color: blue;
+}
+.rojoTitulo{
+    color: red;
+}
+.verdeTitulo{
+    color: green;
+    font-family: sans-serif;
+}
+.violetaTitulo{
+    color: violet;
+}
+.azuloscuroTitulo{
+    color: darkblue;
+    font-family: sans-serif;
+}
+.rojooscuroTitulo{
+    color: darkred;
+    font-family: sans-serif;
+}
+.naranjoTitulo{
+    color: orange;
+}
+
+.azul{
+    background-color: blue;
+    
+}
+.rojo{
+    background-color: red;
+}
+.verde{
+    background-color: green;
+    color: white;
+    border-radius: 10px ;
+    padding-left: 15px;
+    padding-right: 15px ;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.violeta{
+    background-color: violet;
+}
+.azuloscuro{
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px ;
+    padding-left: 15px;
+    padding-right: 15px ;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.rojooscuro{
+    background-color: darkred;
+    color: white;
+    border-radius: 10px ;
+    padding-left: 15px;
+    padding-right: 15px ;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.naranjo{
+    background-color: orange;
+}
+
+.ver{
+    padding-left: 15px;
+    padding-right: 15px ;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px ;
+}
+.ver:hover{
+    color:rgb(184, 181, 181);
+}

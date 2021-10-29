@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <img id="fondo" src='../../../assets/fondo.jpg' alt='fondoInicio'>
+
+    <div class="probando">
+        <ul class="lista" >
+            <li *ngFor="let noticia of getItem() " id="noticia">
+                <img src='../../../assets/{{noticia.imagen}}' alt='{{noticia.imagen}}'>
+                <h2> <span [ngClass]="{azulTitulo: Colorboton(noticia.id)=='blue', rojoTitulo: Colorboton(noticia.id)=='red', verdeTitulo: Colorboton(noticia.id)=='green', violetaTitulo: Colorboton(noticia.id)=='violet', azuloscuroTitulo:  Colorboton(noticia.id)=='darkblue', rojooscuroTitulo: Colorboton(noticia.id)=='darkred', naranjoTitulo: Colorboton(noticia.id)=='orange'}" > {{noticia.titulo}}</span></h2>
+                <p>{{noticia.descripcion}} </p>
+                <button class="ver" [ngClass]="{azul: Colorboton(noticia.id)=='blue', rojo: Colorboton(noticia.id)=='red', verde: Colorboton(noticia.id)=='green', violeta: Colorboton(noticia.id)=='violet', azuloscuro:  Colorboton(noticia.id)=='darkblue', rojooscuro: Colorboton(noticia.id)=='darkred', naranjo: Colorboton(noticia.id)=='orange'}" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active"  >  Leer Más </button>
+            </li>
+        </ul> 
+    </div>
+
+    <div class="probando">
+        <ul  class="lista" >
+            <li *ngFor="let noticia of getItem2()" id="noticia" >
+                <img src='../../../assets/{{noticia.imagen}}' alt='{{noticia.imagen}}'>
+                <h2 > {{noticia.titulo}}  </h2>
+                <p>{{noticia.descripcion}} </p>
+                <button  class="ver" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" >Leer Más</button>
+            </li>
+        </ul> 
+    </div>
+
+    <h1>Noticias - Valparaíso</h1>
+</div>
+<app-footer></app-footer>

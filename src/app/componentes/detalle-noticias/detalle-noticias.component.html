@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <img class="fondo" src='../../../assets/{{Noticia.imagen}}' alt='{{Noticia.imagen}}'>
+    <h2>{{Noticia.titulo}} | <span [ngClass]="{azul: Categoria.color=='blue', rojo:Categoria.color=='red', verde:Categoria.color=='green', violeta:Categoria.color=='violet', azuloscuro: Categoria.color=='darkblue', rojooscuro:Categoria.color=='darkred', naranjo:Categoria.color=='orange' } " >{{Categoria.titulo}} </span> </h2>
+    <p> Escrito por : {{Noticia.autor}} <br> Fecha: {{Noticia.fecha}}</p> 
+    <p>{{Noticia.texto}}</p>
+</div>
+
+<app-footer></app-footer>
